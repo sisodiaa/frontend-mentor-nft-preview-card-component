@@ -24,6 +24,83 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-main-bg);
+}
+
+.card {
+  width: 88%;
+  padding: 1.5rem;
+  background-color: var(--color-card-bg);
+  border-radius: 1rem;
+}
+.card__image {
+  border-radius: 1rem;
+  width: 100%;
+}
+.card__caption {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-white);
+}
+.card__description {
+  margin-bottom: 1.25rem;
+  color: var(--color-soft-blue);
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+.card__info {
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+.card__price {
+  flex: 1;
+  color: var(--color-cyan);
+  display: flex;
+}
+.card__price span {
+  display: block;
+  margin-left: 0.5rem;
+}
+.card__deadline {
+  color: var(--color-soft-blue);
+  display: flex;
+}
+.card__deadline img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.card__deadline span {
+  display: block;
+  margin-left: 0.5rem;
+}
+.card__creator {
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding-top: 1.5rem;
+  color: var(--color-soft-blue);
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--color-line);
+}
+.card__creator span {
+  color: var(--color-white);
+}
+.card__avatar {
+  display: block;
+  margin-right: 1.1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+}
+
 .attribution {
   display: none;
 }
