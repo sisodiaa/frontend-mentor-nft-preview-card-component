@@ -2,6 +2,7 @@
 :root {
   --color-soft-blue: hsl(215, 51%, 70%);
   --color-cyan: hsl(178, 100%, 50%);
+  --color-cyan-translucent: hsla(178, 100%, 50%, 0.45);
   --color-main-bg: hsl(217, 54%, 11%);
   --color-card-bg: hsl(216, 50%, 16%);
   --color-line: hsl(215, 32%, 27%);
@@ -33,19 +34,44 @@ body {
 }
 
 .card {
+  position: relative;
   width: 88%;
   padding: 1.5rem;
   background-color: var(--color-card-bg);
   border-radius: 1rem;
 }
+.card__figure {
+  position: relative;
+}
 .card__image {
   border-radius: 1rem;
   width: 100%;
+}
+.card__image-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 4px);
+  border-radius: 1rem;
+  background-color: var(--color-cyan-translucent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.card__image-overlay:hover {
+  opacity: 1;
 }
 .card__caption {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   color: var(--color-white);
+  transition: color 0.3s;
+}
+.card__caption:hover {
+  color: var(--color-cyan);
 }
 .card__description {
   margin-bottom: 1.25rem;
@@ -90,7 +116,13 @@ body {
   border-top: 1px solid var(--color-line);
 }
 .card__creator span {
+  display: inline-block;
+  margin-left: 0.25rem;
   color: var(--color-white);
+  transition: color 0.3s;
+}
+.card__creator span:hover {
+  color: var(--color-cyan);
 }
 .card__avatar {
   display: block;
